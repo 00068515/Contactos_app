@@ -21,7 +21,7 @@ public class FragmentContacto extends AppCompatActivity{
         nombre_contacto = (TextView) findViewById(R.id.nombre_contacto);
         telefono_contacto = (TextView) findViewById(R.id.telefono_contacto);
         correo_contacto = (TextView) findViewById(R.id.correo_contacto);
-        //imagen_contacto = (ImageView) findViewById(R.id.imagen_contacto);
+        imagen_contacto = (ImageView) findViewById(R.id.imagen_contacto);
 
         // Recibiendo datos
        // Bundle bundle = getIntent().getExtras();
@@ -35,7 +35,7 @@ public class FragmentContacto extends AppCompatActivity{
         nombre_contacto.setText(nombre);
         telefono_contacto.setText(telefono+"");
         correo_contacto.setText(correo);
-        // imagen_contacto.setImageResource(imagen);
+        imagen_contacto.setImageResource(imagen);
 
 
     }
