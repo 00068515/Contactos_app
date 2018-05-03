@@ -3,56 +3,66 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:orientation="vertical"
     >
     <android.support.v4.widget.NestedScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
     <ImageView
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="40dp"
         android:id="@+id/imagen_contacto"/>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
-        android:textSize="16sp"
-        android:id="@+id/nombre_contacto"/>
+        android:textSize="18sp"
+        android:id="@+id/nombre_contacto"
+        android:textAlignment="center"
+        />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nombre"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textAlignment="center"
         />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:id="@+id/telefono_contacto"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:textAlignment="center"
         />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:textStyle="bold"
         android:text="Teléfono"
+        android:textAlignment="center"
         />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:id="@+id/correo_contacto"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:textAlignment="center"
         />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="24sp"
         android:text="Correo"
+        android:textAlignment="center"
         />
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,6 +73,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+        </LinearLayout>
         </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
 </LinearLayout>
