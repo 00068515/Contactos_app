@@ -37,14 +37,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(MyViewHolder holder, final int position) {
 
         holder.nombre_contacto_cardview.setText(listaContacto.get(position).getNombre());
-        holder.imagen_contacto_cardview.setImageResource(listaContacto.get(position).getImagen());
+        if(listaContacto.get(position).getImagenUri() != null){
+            holder.imagen_contacto_cardview.setImageURI(listaContacto.get(position).getImagenUri());
+        }
+        else{
+        holder.imagen_contacto_cardview.setImageResource(listaContacto.get(position).getImagen());}
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(mContext,FragmentContacto.class);
+                Intent intent = new Intent(mContext,ActivityContacto.class);
                 String nombre = listaContacto.get(position).getNombre();
-                int telefono = listaContacto.get(position).getTelefono();
+                String telefono = listaContacto.get(position).getTelefono();
                 String correo = listaContacto.get(position).getCorreo();
                 int imagen = listaContacto.get(position).getImagen();
 
@@ -54,7 +58,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 intent.putExtra("Telefono",telefono);
                 if(correo != null){intent.putExtra("Correo",correo);}
                 else{intent.putExtra("Correo","");}
-                intent.putExtra("Imagen",imagen);
+                if(listaContacto.get(position).getImagenUri()!=null){intent.putExtra("Uri",listaContacto.get(position).getImagenUri().toString());}
+                else{intent.putExtra("Imagen",imagen);}
 
                 // Inicializamos la nueva actividad
                 mContext.startActivity(intent);

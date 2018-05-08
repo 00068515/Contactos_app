@@ -1,21 +1,24 @@
 package com.example.edwin.contactos_app;
-
+import android.net.Uri;
 public class Contacto {
     private String nombre;
-    private int telefono;
+    private String telefono;
     private String correo;
     private int imagen;
+    private Uri imagenUri;
 
-    public Contacto(String nombre, int telefono, String correo, int imagen) {
+    public Contacto(String nombre, String telefono, String correo, int imagen) {
         this.nombre = nombre;
         this.telefono = telefono;
         this.correo = correo;
         this.imagen = imagen;
     }
 
+
     public Contacto() {
     }
-
+    public Uri getImagenUri(){return imagenUri;}
+    public void setImagenUri(Uri imagenUri){this.imagenUri = imagenUri;}
     public String getNombre() {
         return nombre;
     }
@@ -24,11 +27,11 @@ public class Contacto {
         this.nombre = nombre;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
