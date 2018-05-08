@@ -8,13 +8,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ActivityAdd extends AppCompatActivity {
     EditText nombreIngresado;
     EditText telefonoIngresado;
     EditText correoIngresado;
-    Button buttonAdd;
+    ImageView buttonAdd;
     String nombreIngre,telefonoIngre,correoIngre;
     public void onCreate(Bundle savedInstance) {
         super.onCreate(savedInstance);
@@ -23,7 +24,7 @@ public class ActivityAdd extends AppCompatActivity {
         nombreIngresado = (EditText) findViewById(R.id.edit_nombre);
         telefonoIngresado = (EditText) findViewById(R.id.edit_numero);
         correoIngresado = (EditText) findViewById(R.id.edit_correo);
-        buttonAdd = (Button) findViewById(R.id.btn_crear_contacto);
+        buttonAdd = (ImageView) findViewById(R.id.btn_crear_contacto);
 
         buttonAdd.setOnClickListener(new View.OnClickListener(){
 

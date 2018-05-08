@@ -1,6 +1,9 @@
 package com.example.edwin.contactos_app;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,8 +17,10 @@ import java.util.List;
 import android.support.design.widget.FloatingActionButton;
 import android.net.Uri;
 import android.view.View;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity{
     public static List<Contacto> listaContacto;
     RecyclerView rcv;
     RecyclerViewAdapter rcvA;
@@ -49,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         rcv.setLayoutManager(new GridLayoutManager(this,3));
         rcv.setAdapter(rcvA);
     }
+
 
     public void addContact(){
         Intent intent = getIntent();
