@@ -66,13 +66,24 @@
         />
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Button
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            >
+            <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <Button
+                android:layout_height="wrap_content"
+                android:id="@+id/share_botton"
+                android:src="@drawable/share_icon"
+                android:layout_weight="1"
+                />
+            <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/call_botton"
+                android:src="@drawable/call_icon"
+
+                />
         </LinearLayout>
         </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
